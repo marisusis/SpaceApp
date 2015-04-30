@@ -1,0 +1,26 @@
+{
+  "name": "SpaceApp",
+  "version": "1.0.0",
+  "description": "My first web app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spacegeek224/SpaceApp.git"
+  },
+  "keywords": [
+    "spacegeek224"
+  ],
+  "author": "spacegeek224",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spacegeek224/SpaceApp/issues"
+  },
+  "dependencies": {
+    "express": "~4.12.3",
+    "socket.io": "~1.3.5",
+    "path": "~0.11.14"
+  }
+}
