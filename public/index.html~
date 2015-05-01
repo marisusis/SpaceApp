@@ -1,10 +1,13 @@
 <html>
   <head>
     <title>SpaceApp</title>
-    
-    </head>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">  
+  </head>
   <body>
-    <div class="body">
+    <div class="container">
+     <div class="jumbotron">
+     asdfasdf
+     </div>
       <form action="">
         <input id="uname" autocomplete="off" /><button onclick="unamef()">Send</button>
       </form>
