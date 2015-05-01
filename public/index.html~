@@ -1,6 +1,12 @@
 <html>
   <head>
     <title>SpaceApp</title>
+    <style>
+    .body
+    {
+     margin: 25px 200px;
+    }
+    </style>
   </head>
 
   <body>
