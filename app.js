@@ -15,7 +15,7 @@ var io = require('socket.io').listen(server);  // Your app passed to socket.io
 io.on('connection', function (socket) {
   console.log('[USER] - A user has connected.'.blue);
 
-  socket.on('unamee', function(uname) {
+  socket.on('uname', function(uname) {
     console.log('[USER] - ' + 'User ' + uname + ' has joined.'.green);
   });
 });

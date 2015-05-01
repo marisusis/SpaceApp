@@ -5,8 +5,8 @@ var console = require('clim')();
 var path    = require('path');
 
 var app = express();
-app.use('/public', express.static(path.join(__dirname, 'public')));
-app.get('public', function (req, res) {
+app.use(express.static(__dirname + '/public'));
+app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
 });
 var server = http.createServer(app).listen(8000);
