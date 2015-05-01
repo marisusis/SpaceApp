@@ -1,24 +1,24 @@
 <html>
   <head>
     <title>SpaceApp</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">  
   </head>
-
   <body>
     <div class="body">
-    <form action="">
-      <input id="uname" autocomplete="off" /><button onclick="unamef()">Send</button>
-    </form>
+      <form action="">
+        <input id="uname" autocomplete="off" /><button onclick="unamef()">Send</button>
+      </form>
     </div>
-    <script src="socket.io/socket.io.js"></script>
-<script>
-  var socket = io();
-  function button() {
-    socket.emit('action', 'button clicked');
-  }
-  function unamef() {
-    var unamev = document.getElementById('uname').value;
-    socket.emit('unamee', unamev);
-  }
+  <script src="socket.io/socket.io.js"></script>
+  <script>
+    var socket = io();
+    function button() {
+     socket.emit('action', 'button clicked');
+    }
+    function unamef() {
+      var unamev = document.getElementById('uname').value;
+      socket.emit('unamee', unamev);
+    }
 </script>
   </body>
 </html>

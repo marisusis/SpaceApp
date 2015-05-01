@@ -1,20 +1,22 @@
-var express = require('express'),
-    http = require('http');
+var express = require('express');
+var http    = require('http');
+var colors  = require('colors');
+var console = require('clim')();
+var path    = require('path');
 
 var app = express();
-app.use('/public', express.static(__dirname + '/public'));
-app.get('/', function (req, res) {
+app.use('/public', express.static(path.join(__dirname, 'public')));
+app.get('public', function (req, res) {
   res.sendFile(__dirname + '/index.html');
 });
 var server = http.createServer(app).listen(8000);
-
 var io = require('socket.io').listen(server);  // Your app passed to socket.io
 
 io.on('connection', function (socket) {
-  console.log('[USER] - A user has connected.');
+  console.log('[USER] - A user has connected.'.blue);
 
   socket.on('unamee', function(uname) {
-    console.log('[USER] - ' + 'User ' + uname + ' has joined.');
+    console.log('[USER] - ' + 'User ' + uname + ' has joined.'.green);
   });
 });
 
